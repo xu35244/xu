@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mian{
+            background-color: deepskyblue;
+            width: 55px;
+            height: 60px;
+            position: absolute;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mian" >
+
+        <input type="button" id="butn1" value="移动">
+
+    </div>
+   
+    <script>
+        var target =document.getElementById("butn1");
+        var xim = document.getElementById("mian").style.width;
+        target.onclick = function(){
+            
+            var box1 =document.getElementById("mian").style.top;
+            box1=box1.replace("px","");
+            box1=Number(box1)+200;
+            document.getElementById("mian").style.top=box1+"px";
+           
+           xim = Number(xim)+20;
+           document.getElementById("mian").style.width = xim+"px";
+            if(box1>=1000){
+                box1=Number(box1)+200;
+                document.getElementById("mian").style.left=box1+"px";
+            }
+        }
+    </script>
+</body>
+</html>
