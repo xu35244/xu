@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button{
+        display: inline-block;
+        padding:15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-emphasis: nome;
+        outline: none;
+        color:#fff;
+        background-color:#4CAF50;
+        border:none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        }
+        .button:hover{
+            background-color: green;
+
+        }
+    
+        .button::after{
+            comtent:"";
+            background: #99EE00;
+            display: block;
+            position: absolute;
+            padding-top: 300px;
+            padding-left: 350px;
+            margin-left: left -20px;;
+            margin-top:-120% ;
+            opacity: 0;
+            transition: all;
+        }
+        .button:active:after{
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s;
+        }
+
+        .button:active{
+            background-color: #3e9e41;
+            box-shadow: 5px #333333;
+            transform: translata(4px);
+        }
+        
+        #wrapper{
+            background-color:beige;
+            font-size: 40px;
+            width: 200px;
+            height: 200px;
+            border:10px dotted red;
+            margin: 20px ;}
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        1234
+    </div>
+
+    <h2>按钮动画</h2>
+    <button class="button">请点击我</button>
+    
+</body>
+
+</html>
